@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="60dp"
+    tools:context=".Main1"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="60dp"
+    tools:context=".Main1">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:focusableInTouchMode="true"
+        android:onClick="imgClick"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="85dp"
+        tools:srcCompat="@drawable/people" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/Name_dis"
+            android:layout_width="match_parent"
+            android:textSize="25sp"
+            android:layout_height="41dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/email_dis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/phone_dis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/DOB_dis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25sp" />
+
+    </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20dp"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/det1_name"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/det1_date"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="text"
+        android:textSize="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/det2_name"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/det2_date"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:text="text"
+        android:textSize="20dp">
+
+        <TextView
+            android:id="@+id/det3_name"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/det3_date"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text=""
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/det4_name"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/det4_date"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/det5_name"
+            android:layout_width="203dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/det5_date"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Logout"
+        android:background="@drawable/button"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Logout"
+        android:textSize="30sp" />
+
+</LinearLayout>
