@@ -2,11 +2,14 @@ package com.example.javaapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.time.LocalDateTime;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -105,10 +108,11 @@ public class Main1<i, size> extends AppCompatActivity {
 
         final HashMap<Date, String> map = new HashMap<>();
         final HashMap<Long, Date>map2 = new HashMap<>();
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        final DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
         final Date new1 = new Date();
         df.format((new1));
         Task<QuerySnapshot> documentReference = fstore.collection("users").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 if (!queryDocumentSnapshots.isEmpty()) {
@@ -119,7 +123,7 @@ public class Main1<i, size> extends AppCompatActivity {
                             date.setYear(new1.getYear());
                             long diffInMillies = (date.getTime() - new1.getTime());
                             long diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
-                            System.out.println(diff);
+                            //System.out.println(diff);
 
                             if(diffInMillies > 0){
                                 map2.put(diff, date);
@@ -135,29 +139,40 @@ public class Main1<i, size> extends AppCompatActivity {
                     int i = 0;
                     if(size >= 1) {
                         name1.setText(map.get(map2.get(sortedKeys.get(i))).toString());
-                        Date currentDate = new Date(sortedKeys.get(i));
-                        DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-                        date1.setText(df.format(currentDate).toString());
+                        Calendar cal = Calendar.getInstance();
+                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
+                        String date = df.format(cal.getTime());
+                        date1.setText(date.toString());
                         i += 1;
                     }
                     if(size >= 2) {
                         name2.setText(map.get(map2.get(sortedKeys.get(i))).toString());
-                        Date currentDate = new Date(sortedKeys.get(i));
-                        DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-                        date2.setText(df.format(currentDate).toString());
+                        Calendar cal = Calendar.getInstance();
+                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
+                        String date = df.format(cal.getTime());
+                        date2.setText(date.toString());
                         i += 1;
                     }if(size >= 3) {
                         name3.setText(map.get(map2.get(sortedKeys.get(i))).toString());
-                        date3.setText(map2.get(sortedKeys.get(i)).toString());
+                        Calendar cal = Calendar.getInstance();
+                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
+                        String date = df.format(cal.getTime());
+                        date3.setText(date.toString());
                         i += 1;
                     }if(size >= 4) {
                         name4.setText(map.get(map2.get(sortedKeys.get(i))).toString().trim());
-                        date4.setText(map2.get(sortedKeys.get(i)).toString());
+                        Calendar cal = Calendar.getInstance();
+                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
+                        String date = df.format(cal.getTime());
+                        date4.setText(date.toString());
                         i+=1;
                     }
                     if(size >= 5) {
                         name5.setText(map.get(map2.get(sortedKeys.get(i))).toString());
-                        date5.setText(map2.get(sortedKeys.get(i)).toString());
+                        Calendar cal = Calendar.getInstance();
+                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
+                        String date = df.format(cal.getTime());
+                        date5.setText(date.toString());
                     }
                 }
             }
