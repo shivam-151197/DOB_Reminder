@@ -5,74 +5,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/drayl"
     android:orientation="vertical"
-    android:layout_marginTop="60dp"
     tools:context=".Main1"
     >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:orientation="horizontal"
-    android:layout_marginTop="60dp"
-    tools:context=".Main1">
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="130dp"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:focusableInTouchMode="true"
-        android:onClick="imgClick"
-        android:paddingTop="30dp"
-        android:paddingBottom="30dp"
-        android:visibility="visible"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="85dp"
-        tools:srcCompat="@drawable/people" />
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        >
-
-        <TextView
-            android:id="@+id/Name_dis"
+        android:layout_height="405dp">
+        <LinearLayout
+            android:background="@drawable/gradient_prof"
             android:layout_width="match_parent"
-            android:textSize="25sp"
-            android:layout_height="41dp"
-            android:text="" />
+            android:layout_height="350dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/email_dis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView3"
+                android:layout_width="277dp"
+                android:layout_height="159dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:onClick="imgClick"
+                android:src="@drawable/people"/>
 
-        <TextView
-            android:id="@+id/phone_dis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:text="" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/Name_dis"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:textSize="21sp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_marginBottom="50dp"
+                android:text="Hello Pal" />
 
-        <TextView
-            android:id="@+id/DOB_dis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="25sp" />
+        </LinearLayout>
 
-    </LinearLayout>
-</LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="390dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="275dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="40dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/arroba_sign"/>
+
+                    <TextView
+                        android:id="@+id/email_dis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="21sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="39dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/contact" />
+                    <TextView
+                        android:id="@+id/phone_dis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="21sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="39dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/cake" />
+                    <TextView
+                        android:id="@+id/DOB_dis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="21sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
 
     <LinearLayout
     android:layout_marginTop="20dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="20dp"
+    android:textSize="20sp"
     android:orientation="horizontal">
 
         <TextView
@@ -94,7 +148,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="text"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:orientation="horizontal">
 
         <TextView
@@ -118,7 +172,7 @@
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:text="text"
-        android:textSize="20dp">
+        android:textSize="20sp">
 
         <TextView
             android:id="@+id/det3_name"
@@ -135,7 +189,7 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <LinearLayout
+   <!-- <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -178,7 +232,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textSize="20sp" />
-    </LinearLayout>
+    </LinearLayout>-->
 
     <Button
         android:id="@+id/Logout"
@@ -186,7 +240,7 @@
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Logout"
+        android:text="@string/logout"
         android:textSize="30sp" />
 
 </LinearLayout>
