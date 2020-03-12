@@ -80,11 +80,11 @@ public class Main1<i, size> extends AppCompatActivity {
         name3 = findViewById(R.id.det3_name);
         date3 =findViewById(R.id.det3_date);
 
-        name4 = findViewById(R.id.det4_name);
+        /*name4 = findViewById(R.id.det4_name);
         date4 =findViewById(R.id.det4_date);
 
         name5 = findViewById(R.id.det5_name);
-        date5 =findViewById(R.id.det5_date);
+        date5 =findViewById(R.id.det5_date);*/
 
         Email = findViewById(R.id.email_dis);
         fAuth = FirebaseAuth.getInstance();
@@ -139,41 +139,26 @@ public class Main1<i, size> extends AppCompatActivity {
                     int i = 0;
                     if(size >= 1) {
                         name1.setText(map.get(map2.get(sortedKeys.get(i))).toString());
-                        Calendar cal = Calendar.getInstance();
-                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
-                        String date = df.format(cal.getTime());
-                        date1.setText(date.toString());
+                        date1.setText(df.format(map2.get(sortedKeys.get(i))).toString());
                         i += 1;
                     }
                     if(size >= 2) {
                         name2.setText(map.get(map2.get(sortedKeys.get(i))).toString());
-                        Calendar cal = Calendar.getInstance();
-                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
-                        String date = df.format(cal.getTime());
-                        date2.setText(date.toString());
+                        date2.setText(df.format(map2.get(sortedKeys.get(i))).toString());
                         i += 1;
                     }if(size >= 3) {
                         name3.setText(map.get(map2.get(sortedKeys.get(i))).toString());
-                        Calendar cal = Calendar.getInstance();
-                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
-                        String date = df.format(cal.getTime());
-                        date3.setText(date.toString());
+                        date3.setText(df.format(map2.get(sortedKeys.get(i))).toString());
                         i += 1;
-                    }if(size >= 4) {
+                    }/*if(size >= 4) {
                         name4.setText(map.get(map2.get(sortedKeys.get(i))).toString().trim());
-                        Calendar cal = Calendar.getInstance();
-                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
-                        String date = df.format(cal.getTime());
-                        date4.setText(date.toString());
+                        date4.setText(df.format(map2.get(sortedKeys.get(i))).toString());
                         i+=1;
                     }
                     if(size >= 5) {
                         name5.setText(map.get(map2.get(sortedKeys.get(i))).toString());
-                        Calendar cal = Calendar.getInstance();
-                        cal.add(Calendar.DAY_OF_MONTH, Math.toIntExact(sortedKeys.get(i))+1);
-                        String date = df.format(cal.getTime());
-                        date5.setText(date.toString());
-                    }
+                        date5.setText(df.format(map2.get(sortedKeys.get(i))).toString());
+                    }*/
                 }
             }
         });
